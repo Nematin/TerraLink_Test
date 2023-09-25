@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RxApp", "RxApp\RxApp.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TxApp", "TxApp\TxApp.csproj", "{B0802E01-EE78-43CB-A2B1-7D39846E8C41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerMessageHub", "ServerMessageHub\ServerMessageHub.csproj", "{4A44063B-E11C-4987-B3DD-ED4C5C44DA05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B0802E01-EE78-43CB-A2B1-7D39846E8C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0802E01-EE78-43CB-A2B1-7D39846E8C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0802E01-EE78-43CB-A2B1-7D39846E8C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A44063B-E11C-4987-B3DD-ED4C5C44DA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A44063B-E11C-4987-B3DD-ED4C5C44DA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A44063B-E11C-4987-B3DD-ED4C5C44DA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A44063B-E11C-4987-B3DD-ED4C5C44DA05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

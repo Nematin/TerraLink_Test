@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RxApp", "RxApp\RxApp.csproj", "{3C367CEB-4B25-4C28-B037-4281B7DD7233}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TxApp", "TxApp\TxApp.csproj", "{B0802E01-EE78-43CB-A2B1-7D39846E8C41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C367CEB-4B25-4C28-B037-4281B7DD7233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C367CEB-4B25-4C28-B037-4281B7DD7233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C367CEB-4B25-4C28-B037-4281B7DD7233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C367CEB-4B25-4C28-B037-4281B7DD7233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0802E01-EE78-43CB-A2B1-7D39846E8C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0802E01-EE78-43CB-A2B1-7D39846E8C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0802E01-EE78-43CB-A2B1-7D39846E8C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0802E01-EE78-43CB-A2B1-7D39846E8C41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2734DFBC-E0FB-4800-8262-A87519B9AF67}
+	EndGlobalSection
+EndGlobal

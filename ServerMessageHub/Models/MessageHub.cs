@@ -11,6 +11,8 @@ namespace ServerMessageHub.Models
             var messageDTO = new MessageDTO { Message = message, Date = DateTime.Now };
 
             await this.Clients.All.SendAsync("Receive", messageDTO);
+
+            await Console.Out.WriteLineAsync($"Received: {message}");
         }
     }
 }

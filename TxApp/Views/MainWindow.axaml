@@ -19,7 +19,8 @@
 
 	<Grid>
 		<Border BorderBrush="Black" CornerRadius="5" BorderThickness="1" Margin="5">
-			<TextBox Text="{Binding Message}" TextWrapping="Wrap" IsEnabled="{Binding IsInputTBEnable}"/>
+			<TextBox Text="{Binding Message}" TextWrapping="Wrap" 
+					 IsEnabled="{Binding IsInputTBEnable}"/>
 		</Border>
 	</Grid>
 

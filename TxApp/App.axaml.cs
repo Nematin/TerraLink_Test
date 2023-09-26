@@ -31,5 +31,11 @@ namespace TxApp
 
             base.OnFrameworkInitializationCompleted();
         }
+        private void Desktop_ShutdownRequested(object? sender, ShutdownRequestedEventArgs e)
+        {
+            var desktop = sender as IClassicDesktopStyleApplicationLifetime;
+            var vm = desktop?.MainWindow.DataContext as MainWindowViewModel;
+            vm!.CloseApp();
+        }
     }
 }

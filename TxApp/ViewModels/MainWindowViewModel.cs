@@ -1,7 +1,6 @@
 ﻿using Avalonia.Threading;
 
 using System;
-using System.Collections.ObjectModel;
 using System.IO;
 
 
@@ -46,7 +45,7 @@ namespace TxApp.ViewModels
 
         public MainWindowViewModel()
         {
-            Title = "Передатчик. Соединение не установлено";
+            Title = "Передатчик. Соединения нет";
 
             try
             {
@@ -67,6 +66,11 @@ namespace TxApp.ViewModels
             _transmitter!.PropertyChanged += TransmitterPropertyChangedEvent;
         }
 
+        public void CloseApp()
+        {
+            _transmitter?.Disconnect();
+        }
+
         private void TransmitterPropertyChangedEvent(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             if (e.PropertyName == nameof(_transmitter.IsConnected))
@@ -75,6 +79,11 @@ namespace TxApp.ViewModels
                 {
                     Title = "Передатчик. Соединение установлено";
                     IsInputTBEnable = true;
+                }
+                else
+                {
+                    IsInputTBEnable = false;
+                    Title = "Передатчик. Соединения нет";                    
                 }
             }
         }

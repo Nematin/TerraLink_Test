@@ -23,6 +23,7 @@ namespace RxApp
                 // Line below is needed to remove Avalonia data validation.
                 // Without this line you will get duplicate validations from both Avalonia and CT
                 ExpressionObserver.DataValidators.RemoveAll(x => x is DataAnnotationsValidationPlugin);
+                desktop.ShutdownRequested += Desktop_ShutdownRequested;
                 desktop.MainWindow = new MainWindow
                 {
                     DataContext = new MainWindowViewModel(),
@@ -30,6 +31,13 @@ namespace RxApp
             }
 
             base.OnFrameworkInitializationCompleted();
+        }
+
+        private void Desktop_ShutdownRequested(object? sender, ShutdownRequestedEventArgs e)
+        {
+            var desktop = sender as IClassicDesktopStyleApplicationLifetime;
+            var vm = desktop?.MainWindow.DataContext as MainWindowViewModel;
+            vm!.CloseApp();
         }
     }
 }

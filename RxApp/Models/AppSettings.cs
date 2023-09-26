@@ -57,7 +57,7 @@ namespace RxApp.Models
             {
                 IpAddress = "localhost",
                 Port = 8000,
-                URL = "api"
+                URL = "messagehub"
             };
             File.WriteAllText("Settings.json", JsonConvert.SerializeObject(settings));
 

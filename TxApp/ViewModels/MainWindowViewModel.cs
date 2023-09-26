@@ -22,7 +22,7 @@ namespace TxApp.ViewModels
             get => _message;
             set
             {
-                if(string.IsNullOrEmpty(value)) { return; }
+                if (string.IsNullOrEmpty(value)) { return; }
 
                 _typingTimer.Stop();
                 SetProperty(ref _message, value);
@@ -30,8 +30,24 @@ namespace TxApp.ViewModels
             }
         }
 
+        private string _title;
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
+        }
+
+        private bool _isInputTBEnable;
+        public bool IsInputTBEnable
+        {
+            get => _isInputTBEnable;
+            set => SetProperty(ref _isInputTBEnable, value);
+        }
+
         public MainWindowViewModel()
         {
+            Title = "Передатчик. Соединение не установлено";
+
             try
             {
                 _settings = AppSettings.GetSettings();
@@ -48,6 +64,19 @@ namespace TxApp.ViewModels
 
             _transmitter = new(_settings.IpAddress, _settings.Port, _settings.URL);
             _transmitter?.Start();
+            _transmitter!.PropertyChanged += TransmitterPropertyChangedEvent;
+        }
+
+        private void TransmitterPropertyChangedEvent(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(_transmitter.IsConnected))
+            {
+                if (_transmitter!.IsConnected)
+                {
+                    Title = "Передатчик. Соединение установлено";
+                    IsInputTBEnable = true;
+                }
+            }
         }
 
         private async void TypingTimerEvent(object? sender, EventArgs e)

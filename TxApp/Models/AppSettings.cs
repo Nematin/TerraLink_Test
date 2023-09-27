@@ -60,8 +60,8 @@ namespace TxApp.Models
             AppSettings settings = new()
             {
                 IpAddress = "localhost",
-                Port = 8000,
-                URL = "api",
+                Port = 5000,
+                URL = "messagehub",
                 DelayTime = 1.0
             };
             File.WriteAllText("Settings.json", JsonConvert.SerializeObject(settings));
